@@ -1,7 +1,5 @@
 package list.designList;
 
-import list.Node;
-
 /**
  * @author clap of thunder
  * @date 2023-10-24 14:06

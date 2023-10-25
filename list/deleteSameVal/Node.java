@@ -1,4 +1,4 @@
-package list;
+package list.deleteSameVal;
 
 /**
  * @author clap of thunder
@@ -14,7 +14,7 @@ public class Node {
 
     @Override
     public String toString() {
-        return "Node{" +
+        return "Test{" +
                 "val=" + val +
                 ", next=" + next +
                 '}';

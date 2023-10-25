@@ -1,4 +1,4 @@
-package list;
+package list.deleteSameVal;
 
 /**
  * @author clap of thunder
