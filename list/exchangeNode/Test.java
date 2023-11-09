@@ -17,25 +17,6 @@ public class Test {
         head2.next=head3;
         head3.next=head4;
 
-//        ListNode pre =null;
-//        ListNode cur =head;
-//        ListNode right1 =cur.next;//2
-//        ListNode right2 =right1.next;//3
-        //1-->pre
-//        cur.next = pre;
-        //2-->1
-//        right1.next = cur;
-        //pre直接指向3就能接上原链表
-//        System.out.println("此时的链表前段为："+right1);
-//        System.out.println("--------------------");
-
-//        cur.next = right2;
-        //此时链表为2--1(cur)--3(pre)--4--5--NULL
-
-//        System.out.println("pre为："+pre);
-//        System.out.println("--------------------");
-//        System.out.println("此时的链表前段为："+right1);
-//        System.out.println("--------------------");
         System.out.println(head);
         System.out.println("--------------------");
         System.out.println(swapPairs20231109(head));
