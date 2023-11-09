@@ -16,9 +16,55 @@ public class Test {
         head1.next=head2;
         head2.next=head3;
         head3.next=head4;
+
+//        ListNode pre =null;
+//        ListNode cur =head;
+//        ListNode right1 =cur.next;//2
+//        ListNode right2 =right1.next;//3
+        //1-->pre
+//        cur.next = pre;
+        //2-->1
+//        right1.next = cur;
+        //pre直接指向3就能接上原链表
+//        System.out.println("此时的链表前段为："+right1);
+//        System.out.println("--------------------");
+
+//        cur.next = right2;
+        //此时链表为2--1(cur)--3(pre)--4--5--NULL
+
+//        System.out.println("pre为："+pre);
+//        System.out.println("--------------------");
+//        System.out.println("此时的链表前段为："+right1);
+//        System.out.println("--------------------");
         System.out.println(head);
         System.out.println("--------------------");
-        System.out.println(swapPairs(head));
+        System.out.println(swapPairs20231109(head));
+    }
+    public static ListNode swapPairs20231109(ListNode head) {
+        if (head==null){
+            return head;
+        }
+        else {
+            ListNode cur = head;
+            ListNode pre = null;//pre只是临时变量用于交换时的临时寄存
+            ListNode start = head.next;
+            //交换1 2：
+            while (cur!=null&&cur.next!=null){
+                ListNode right1 =cur.next;//2
+                ListNode right2 =right1.next;//3
+                //1-->pre
+                cur.next = pre;
+                //2-->1
+                right1.next = cur;
+                //pre直接指向3就能接上原链表
+                cur.next = right2;//此时链表为2--1(cur)--3(pre)--4--5--NULL
+                //更新:
+                cur = cur.next;
+            }
+            return start;
+        }
+        //引入pre:1-->2-->3-->4 ===> pre<--1<--2 3-->4 ===> <--1(pre)<--2 3-->4
+
     }
 
     public static ListNode swapPairs(ListNode head) {

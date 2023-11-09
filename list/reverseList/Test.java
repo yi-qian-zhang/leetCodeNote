@@ -16,9 +16,24 @@ public class Test {
         head1.next=head2;
         head2.next=head3;
         head3.next=head4;
-        System.out.println(reverseList(head));
-        System.out.println(reverseList(null));
+        System.out.println(reverseList20231109(head));
+        System.out.println(reverseList20231109(null));
 
+    }
+    public static ListNode reverseList20231109(ListNode head) {
+        if (head == null) {
+            return head;
+        }
+        ListNode pre = new ListNode();
+        ListNode cur = head;
+        ListNode temp;
+        while (cur != null) {
+            temp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur =temp;
+        }
+        return pre;
     }
     public static ListNode reverseList(ListNode head) {
         //双指针解法pre,cur
